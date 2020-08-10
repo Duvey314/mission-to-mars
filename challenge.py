@@ -128,7 +128,7 @@ def hemisphere_images(browser):
             img = img_soup.find('a', text='Sample')
             img_url = img['href']
             title = browser.find_by_css("h2.title").text
-            hemi_dict = {'title':title,'img_url':img_url}
+            hemi_dict = {title:img_url}
             hemispheres.append(hemi_dict.copy())
     
     return hemispheres
@@ -156,3 +156,6 @@ def scrape_all():
 if __name__ == "__main__":
     # If running as script, print scraped data
     print(scrape_all())
+
+
+
